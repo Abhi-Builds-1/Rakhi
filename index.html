@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Rakshabandhan ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<!-- ==================================================
+                    FIVE SONGS
+================================================== -->
+
+<audio id="song1" src="song1.mp3" loop></audio>
+<audio id="song2" src="song2.mp3" loop></audio>
+<audio id="song3" src="song3.mp3" loop></audio>
+<audio id="song4" src="song4.mp3" loop></audio>
+<audio id="song5" src="song5.mp3" loop></audio>
+
+
+
+<!-- ==================================================
+                    PAGE 1
+================================================== -->
+
+<section class="page active" id="page1">
+
+    <div class="floating-hearts">
+        ❤️ 💕 💖 💗 💓 💞 ✨
+    </div>
+
+    <div class="page-card">
+
+        <div class="sparkles">
+            ✨ ✨ ✨
+        </div>
+
+        <p class="small-title">
+            A Special Rakshabandhan Surprise
+        </p>
+
+        <h1>
+            Happy Rakshabandhan
+        </h1>
+
+        <h2>
+            To My Amazing Sisters ❤️
+        </h2>
+
+
+        <!-- Dancing cartoon -->
+
+        <div class="dancing-character">
+
+            🧍‍♂️
+
+            <span class="character-heart">
+                ❤️
+            </span>
+
+        </div>
+
+
+        <p class="message">
+
+            Distance may keep us apart sometimes,
+            but the bond between a brother and sister
+            can never become distant. ❤️
+
+        </p>
+
+
+        <button
+            class="main-btn"
+            onclick="goToPage(2)">
+
+            Open My Surprise 💝
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+                    PAGE 2
+================================================== -->
+
+<section class="page" id="page2">
+
+    <div class="question-card">
+
+        <div class="decoration">
+            💕 ✨ 🌸 ✨ 💕
+        </div>
+
+        <h1>
+            One Important Question...
+        </h1>
+
+
+        <div class="big-heart">
+            ❤️
+        </div>
+
+
+        <h2>
+            DO YOU LOVE YOUR BROTHER?
+        </h2>
+
+
+        <p>
+            Be honest... 👀
+        </p>
+
+
+        <div class="answer-area">
+
+            <button
+                id="yesBtn"
+                class="yes-btn"
+                onclick="yesAnswer()">
+
+                YES ❤️
+
+            </button>
+
+
+            <button
+                id="noBtn"
+                class="no-btn">
+
+                NO 😤
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+                    PAGE 3
+================================================== -->
+
+<section class="page" id="page3">
+
+    <div class="angry-card">
+
+        <div class="angry-emoji">
+            😤
+        </div>
+
+
+        <h1>
+            HOW DARE YOU?!
+        </h1>
+
+
+        <h2>
+            You clicked NO? 😭
+        </h2>
+
+
+        <p>
+            I know you love your brother! 😂❤️
+        </p>
+
+
+        <!-- Cartoon -->
+
+        <div class="angry-cartoon">
+            🧍‍♂️💢
+        </div>
+
+
+        <button
+            class="try-btn"
+            onclick="goToPage(2)">
+
+            TRY AGAIN 🔄
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+                    PAGE 4
+================================================== -->
+
+<section class="page" id="page4">
+
+    <div class="gift-container">
+
+
+        <div class="page-heading">
+
+            <div>
+                🎀 ✨ 🎀
+            </div>
+
+            <h1>
+                I KNOW YOU LOVE ME ❤️
+            </h1>
+
+            <p>
+                Now open your gifts one by one 🎁
+            </p>
+
+        </div>
+
+
+
+        <!-- ================= GIFT 1 ================= -->
+
+        <div
+            class="gift-box"
+            onclick="openGift(1)">
+
+            <div class="gift-icon">
+                🎁
+            </div>
+
+            <h2>
+                Gift Box 1
+            </h2>
+
+            <p>
+                Something Emotional 💌
+            </p>
+
+        </div>
+
+
+        <div
+            id="giftContent1"
+            class="gift-content">
+
+            <h2>
+                For My Sister, Even From Far Away 💌
+            </h2>
+
+
+            <p>
+                Sometimes life puts miles between us,
+                and we cannot meet whenever we want.
+                But no distance can change the bond
+                we share.
+            </p>
+
+
+            <p>
+                I miss our conversations,
+                our stupid fights,
+                our laughter,
+                and all those little moments
+                that became beautiful memories.
+            </p>
+
+
+            <p>
+                Wherever we are,
+                you will always have a brother
+                who cares about you. ❤️
+            </p>
+
+        </div>
+
+
+
+        <!-- ================= GIFT 2 ================= -->
+
+        <div
+            class="gift-box"
+            onclick="openGift(2)">
+
+            <div class="gift-icon">
+                🎁
+            </div>
+
+            <h2>
+                Gift Box 2
+            </h2>
+
+            <p>
+                Rakhi Memories 🥰
+            </p>
+
+        </div>
+
+
+        <div
+            id="giftContent2"
+            class="gift-content">
+
+            <h2>
+                Our Rakshabandhan Memories 🧿❤️
+            </h2>
+
+
+            <p>
+                Five beautiful memories of us ❤️
+            </p>
+
+
+            <div class="photo-grid">
+
+
+                <img
+                    src="rakhi1.jpg"
+                    alt="Rakhi memory 1">
+
+
+                <img
+                    src="rakhi2.jpg"
+                    alt="Rakhi memory 2">
+
+
+                <img
+                    src="rakhi3.jpg"
+                    alt="Rakhi memory 3">
+
+
+                <img
+                    src="rakhi4.jpg"
+                    alt="Rakhi memory 4">
+
+
+                <img
+                    src="rakhi5.jpg"
+                    alt="Rakhi memory 5">
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= GIFT 3 ================= -->
+
+        <div
+            class="gift-box"
+            onclick="openGift(3)">
+
+            <div class="gift-icon">
+                🎁
+            </div>
+
+            <h2>
+                Gift Box 3
+            </h2>
+
+            <p>
+                Memories I Miss ❤️
+            </p>
+
+        </div>
+
+
+        <div
+            id="giftContent3"
+            class="gift-content">
+
+            <h2>
+                Memories I Never Want To Forget 💕
+            </h2>
+
+
+            <p>
+                14 little pieces of our memories...
+            </p>
+
+
+            <div class="photo-grid">
+
+
+                <img
+                    src="memory1.jpg"
+                    alt="Memory 1">
+
+
+                <img
+                    src="memory2.jpg"
+                    alt="Memory 2">
+
+
+                <img
+                    src="memory3.jpg"
+                    alt="Memory 3">
+
+
+                <img
+                    src="memory4.jpg"
+                    alt="Memory 4">
+
+
+                <img
+                    src="memory5.jpg"
+                    alt="Memory 5">
+
+
+                <img
+                    src="memory6.jpg"
+                    alt="Memory 6">
+
+
+                <img
+                    src="memory7.jpg"
+                    alt="Memory 7">
+
+
+                <img
+                    src="memory8.jpg"
+                    alt="Memory 8">
+
+
+                <img
+                    src="memory9.jpg"
+                    alt="Memory 9">
+
+
+                <img
+                    src="memory10.jpg"
+                    alt="Memory 10">
+
+
+                <img
+                    src="memory11.jpg"
+                    alt="Memory 11">
+
+
+                <img
+                    src="memory12.jpg"
+                    alt="Memory 12">
+
+
+                <img
+                    src="memory13.jpg"
+                    alt="Memory 13">
+
+
+                <img
+                    src="memory14.jpg"
+                    alt="Memory 14">
+
+
+            </div>
+
+
+            <button
+                class="next-btn"
+                onclick="goToPage(5)">
+
+                Read My Letter 💌
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+                    PAGE 5
+================================================== -->
+
+<section class="page" id="page5">
+
+    <div class="letter-card">
+
+        <div class="letter-decoration">
+            💕 ✨ 🌸 ✨ 💕
+        </div>
+
+
+        <h1>
+            A Letter For My Sisters 💌
+        </h1>
+
+
+        <div class="letter">
+
+
+            <p>
+                Dear Didi ❤️,
+            </p>
+
+
+            <p>
+                I don't always know how to express
+                everything I feel, so I wanted to put
+                some of it into this little surprise.
+            </p>
+
+
+            <p>
+                You are not just my sister.
+                You are one of the people who has
+                made so many parts of my life special.
+            </p>
+
+
+            <p>
+                We have laughed together,
+                fought over silly things,
+                annoyed each other,
+                and made memories that I will
+                always keep close to my heart.
+            </p>
+
+
+            <p>
+                Even when we are far away,
+                those memories don't disappear.
+                They become even more precious.
+            </p>
+
+
+            <p>
+                On this Rakshabandhan,
+                I just want to say...
+            </p>
+
+
+            <h2>
+                I LOVE YOU, DIDI ❤️
+            </h2>
+
+
+            <p>
+                Thank you for being my sister,
+                my supporter,
+                and sometimes my biggest headache 😂.
+            </p>
+
+
+            <p>
+                No matter where life takes us,
+                you will always have a special place
+                in my heart.
+            </p>
+
+
+            <p class="signature">
+
+                With lots of love,<br>
+                Your Brother ❤️
+
+            </p>
+
+
+        </div>
+
+
+        <div class="final-hearts">
+            ❤️ 💕 💖 💗 💞
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+</body>
+</html>

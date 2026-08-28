@@ -1,0 +1,961 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    overflow-x: hidden;
+    background: #fff0f5;
+}
+
+
+/* ==================================================
+                    PAGE SYSTEM
+================================================== */
+
+.page {
+    display: none;
+
+    min-height: 100vh;
+    width: 100%;
+
+    padding: 20px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.page.active {
+    display: flex;
+}
+
+
+
+/* ==================================================
+                    PAGE 1
+================================================== */
+
+#page1 {
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            #ffd6e7,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 90% 80%,
+            #e3d4ff,
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #fff0f5,
+            #ffe1ec
+        );
+}
+
+
+.page-card {
+
+    width: 100%;
+    max-width: 700px;
+
+    padding: 45px 25px;
+
+    text-align: center;
+
+    border-radius: 35px;
+
+    background: rgba(255,255,255,0.9);
+
+    box-shadow:
+        0 20px 60px
+        rgba(150,50,100,0.25);
+
+    border:
+        3px solid
+        rgba(255,120,170,0.4);
+}
+
+
+.small-title {
+
+    color: #b85c85;
+
+    font-size: 18px;
+
+    margin-bottom: 15px;
+}
+
+
+.page-card h1 {
+
+    font-size:
+        clamp(38px, 8vw, 70px);
+
+    color: #d63384;
+
+    margin-bottom: 10px;
+}
+
+
+.page-card h2 {
+
+    color: #704070;
+
+    margin-bottom: 20px;
+}
+
+
+.message {
+
+    max-width: 560px;
+
+    margin: 20px auto;
+
+    line-height: 1.7;
+
+    font-size: 18px;
+
+    color: #5d4055;
+}
+
+
+.sparkles {
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+
+.floating-hearts {
+
+    position: absolute;
+
+    top: 25px;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 25px;
+
+    letter-spacing: 10px;
+
+    animation:
+        float 3s infinite
+        ease-in-out;
+}
+
+
+.dancing-character {
+
+    font-size: 75px;
+
+    position: relative;
+
+    width: 110px;
+
+    margin: 15px auto;
+
+    animation:
+        dance 0.7s infinite alternate;
+}
+
+
+.character-heart {
+
+    position: absolute;
+
+    top: -10px;
+
+    right: -10px;
+
+    font-size: 30px;
+}
+
+
+@keyframes dance {
+
+    from {
+        transform:
+            rotate(-8deg)
+            translateY(0);
+    }
+
+    to {
+        transform:
+            rotate(8deg)
+            translateY(-12px);
+    }
+
+}
+
+
+@keyframes float {
+
+    0%, 100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-15px);
+    }
+
+}
+
+
+
+/* ==================================================
+                    BUTTONS
+================================================== */
+
+.main-btn,
+.try-btn,
+.next-btn {
+
+    border: none;
+
+    padding:
+        15px 28px;
+
+    border-radius: 50px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4f91,
+            #c91870
+        );
+
+    box-shadow:
+        0 8px 20px
+        rgba(200,30,100,0.3);
+
+    transition:
+        0.25s;
+}
+
+
+.main-btn:hover,
+.try-btn:hover,
+.next-btn:hover {
+
+    transform:
+        scale(1.06);
+}
+
+
+
+/* ==================================================
+                    PAGE 2
+================================================== */
+
+#page2 {
+
+    background:
+
+        radial-gradient(
+            circle at top left,
+            #ffd5e5,
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at bottom right,
+            #e2d5ff,
+            transparent 35%
+        ),
+
+        #fff5fa;
+}
+
+
+.question-card {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    text-align: center;
+
+    padding: 45px 25px;
+
+    background:
+        rgba(255,255,255,0.92);
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(120,40,90,0.25);
+}
+
+
+.question-card h1 {
+
+    color: #8f416a;
+
+    margin-bottom: 20px;
+}
+
+
+.question-card h2 {
+
+    color: #c2185b;
+
+    font-size:
+        clamp(25px,6vw,42px);
+
+    margin: 20px 0;
+}
+
+
+.question-card p {
+
+    color: #777;
+}
+
+
+.decoration {
+
+    font-size: 25px;
+}
+
+
+.big-heart {
+
+    font-size: 85px;
+
+    animation:
+        heartbeat 1s infinite;
+}
+
+
+@keyframes heartbeat {
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+}
+
+
+.answer-area {
+
+    position: relative;
+
+    height: 130px;
+
+    margin-top: 25px;
+}
+
+
+.yes-btn,
+.no-btn {
+
+    border: none;
+
+    padding:
+        14px 28px;
+
+    border-radius: 40px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    position: absolute;
+}
+
+
+.yes-btn {
+
+    background: #ff4f91;
+
+    color: white;
+
+    left: 30%;
+}
+
+
+.no-btn {
+
+    background: #555;
+
+    color: white;
+
+    left: 55%;
+
+    transition:
+        left 0.2s,
+        top 0.2s;
+}
+
+
+
+/* ==================================================
+                    PAGE 3
+================================================== */
+
+#page3 {
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            #ffd4d4,
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 80% 80%,
+            #ffd9c2,
+            transparent 35%
+        ),
+
+        #fff4f0;
+}
+
+
+.angry-card {
+
+    max-width: 600px;
+
+    width: 100%;
+
+    text-align: center;
+
+    background: white;
+
+    padding: 50px 25px;
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(150,50,50,0.25);
+}
+
+
+.angry-emoji {
+
+    font-size: 80px;
+}
+
+
+.angry-card h1 {
+
+    color: #e53935;
+
+    font-size:
+        clamp(38px,8vw,65px);
+
+    margin: 20px 0;
+}
+
+
+.angry-card h2 {
+
+    color: #753d3d;
+}
+
+
+.angry-card p {
+
+    margin: 20px 0;
+
+    font-size: 20px;
+}
+
+
+.angry-cartoon {
+
+    font-size: 75px;
+
+    animation:
+        angryDance
+        0.5s
+        infinite
+        alternate;
+}
+
+
+@keyframes angryDance {
+
+    from {
+        transform:
+            translateX(-8px);
+    }
+
+    to {
+        transform:
+            translateX(8px);
+    }
+
+}
+
+
+
+/* ==================================================
+                    PAGE 4
+================================================== */
+
+#page4 {
+
+    background:
+
+        radial-gradient(
+            circle at top right,
+            #ffe1ec,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at bottom left,
+            #e6ddff,
+            transparent 30%
+        ),
+
+        #fff7fb;
+
+    align-items:
+        flex-start;
+}
+
+
+.gift-container {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    padding: 30px 10px;
+
+    text-align: center;
+}
+
+
+.page-heading h1 {
+
+    color: #c2185b;
+
+    font-size:
+        clamp(30px,7vw,55px);
+
+    margin: 10px 0;
+}
+
+
+.page-heading p {
+
+    color: #765;
+
+    margin-bottom: 25px;
+}
+
+
+.gift-box {
+
+    background:
+        rgba(255,255,255,0.95);
+
+    border:
+        2px solid
+        #ffc1d8;
+
+    border-radius: 25px;
+
+    padding: 25px;
+
+    margin: 20px auto;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px
+        rgba(150,50,100,0.15);
+
+    transition:
+        0.3s;
+}
+
+
+.gift-box:hover {
+
+    transform:
+        translateY(-5px);
+}
+
+
+.gift-icon {
+
+    font-size: 70px;
+
+    animation:
+        giftBounce
+        1.5s
+        infinite;
+}
+
+
+@keyframes giftBounce {
+
+    0%,100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-8px);
+    }
+
+}
+
+
+.gift-box h2 {
+
+    color: #b52a69;
+
+    margin: 8px;
+}
+
+
+.gift-box p {
+
+    color: #777;
+}
+
+
+.gift-content {
+
+    display: none;
+
+    background:
+        rgba(255,255,255,0.95);
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    margin:
+        -8px auto 25px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(100,50,80,0.12);
+}
+
+
+.gift-content.show {
+
+    display: block;
+
+    animation:
+        appear
+        0.5s
+        ease;
+}
+
+
+@keyframes appear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(-15px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+.gift-content h2 {
+
+    color: #c2185b;
+
+    margin-bottom: 15px;
+}
+
+
+.gift-content p {
+
+    line-height: 1.8;
+
+    color: #604b58;
+
+    margin: 10px 0;
+}
+
+
+
+/* ==================================================
+                    PHOTO GRID
+================================================== */
+
+.photo-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+
+.photo-grid img {
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    border:
+        4px solid white;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,0.15);
+
+    transition:
+        0.3s;
+}
+
+
+.photo-grid img:hover {
+
+    transform:
+        scale(1.04)
+        rotate(1deg);
+}
+
+
+.next-btn {
+
+    margin-top: 25px;
+}
+
+
+
+/* ==================================================
+                    PAGE 5
+================================================== */
+
+#page5 {
+
+    background:
+
+        radial-gradient(
+            circle at top left,
+            #ffd8e7,
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at bottom right,
+            #ddd1ff,
+            transparent 35%
+        ),
+
+        #fff7fb;
+
+    align-items:
+        flex-start;
+}
+
+
+.letter-card {
+
+    width: 100%;
+
+    max-width: 750px;
+
+    margin: 25px auto;
+
+    background:
+        rgba(255,255,255,0.95);
+
+    padding: 40px 30px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(100,40,90,0.25);
+
+    border:
+        2px solid
+        #eab6cb;
+}
+
+
+.letter-decoration {
+
+    text-align: center;
+
+    font-size: 25px;
+}
+
+
+.letter-card h1 {
+
+    text-align: center;
+
+    color: #b52a69;
+
+    font-size:
+        clamp(30px,7vw,50px);
+
+    margin:
+        15px 0 30px;
+}
+
+
+.letter {
+
+    color: #574653;
+
+    font-size: 18px;
+
+    line-height: 2;
+}
+
+
+.letter p {
+
+    margin-bottom: 18px;
+}
+
+
+.letter h2 {
+
+    text-align: center;
+
+    color: #d63384;
+
+    margin: 25px 0;
+
+    font-size: 32px;
+}
+
+
+.signature {
+
+    text-align: right;
+
+    font-weight: bold;
+
+    color: #a4426d;
+}
+
+
+.final-hearts {
+
+    text-align: center;
+
+    font-size: 30px;
+
+    margin-top: 25px;
+}
+
+
+
+/* ==================================================
+                    MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .page {
+        padding: 12px;
+    }
+
+
+    .page-card,
+    .question-card,
+    .angry-card {
+        padding:
+            30px 18px;
+    }
+
+
+    .photo-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 8px;
+    }
+
+
+    .photo-grid img {
+
+        border-radius: 10px;
+    }
+
+
+    .yes-btn {
+
+        left: 20%;
+    }
+
+
+    .no-btn {
+
+        left: 55%;
+    }
+
+
+    .letter-card {
+
+        padding:
+            30px 20px;
+    }
+
+
+    .letter {
+
+        font-size: 16px;
+    }
+
+}
